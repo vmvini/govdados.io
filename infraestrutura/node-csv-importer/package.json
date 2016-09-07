@@ -1,0 +1,19 @@
+{
+  "name": "node-csv-importer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "importer.js",
+  "dependencies": {
+    "extract-zip": "^1.5.0",
+    "mkdirp": "^0.5.1",
+    "pg": "^6.1.0",
+    "pg-copy-streams": "^1.1.1",
+    "venqueuer": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

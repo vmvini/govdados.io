@@ -1,0 +1,21 @@
+version: '2'
+services:
+  
+  node-csv-importer:
+    build:
+      context: ./infraestrutura/node-csv-importer/
+      dockerfile: ./Dockerfile
+    depends_on:
+      - pg-alpine-eleicoes
+    volumes:
+      - ./cache/:/usr/src/app/cache
+      - ./temp/:/usr/src/app/downloads
+  
+
+  pg-alpine-eleicoes:
+    build:
+      context: ./infraestrutura/postgres_alpine
+      dockerfile: ./Dockerfile
+    ports:
+      - "2345:5432" # Bind host port 5432 to PostgreSQL port 5432
+
